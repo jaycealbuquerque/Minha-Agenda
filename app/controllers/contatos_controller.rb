@@ -16,6 +16,18 @@ class ContatosController < ApplicationController
   end
 
 
+  def edit
+  	@contato = Contato.find(params[:id])
+  end
+
+  def update
+  	@contato = Contato.find(params[:id])
+  	@contato.update(contato_params)
+
+  	redirect_to contatos_path
+  end
+
+
   private
 
   	def contato_params

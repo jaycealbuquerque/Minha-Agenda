@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header"><h4>Editar Contato</h4></div>
+	
+
+	<%= form_with model: @contato do |form| %>		
+		  <div class="field">
+		    <%= form.label :nome %><br/>
+		    <%= form.text_field :nome %>
+		  </div>
+
+		  <div class="field">
+		    <%= form.label :telefone %><br/>
+		    <%= form.number_field :telefone %>
+		  </div>
+
+		  <div class="actions">
+		    <%= form.submit %>
+		  </div>	
+		<% end %>
+
+	<%= link_to 'Mostrar', @contato %> |
+	<%= link_to 'Voltar', contatos_path %>
+
+	</div>
+</div>
+
+
+
