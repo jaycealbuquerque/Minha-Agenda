@@ -15,6 +15,11 @@ class ContatosController < ApplicationController
 
   end
 
+  def show
+  	@contato = Contato.find(params[:id])
+  end
+
+
 
   def edit
   	@contato = Contato.find(params[:id])
