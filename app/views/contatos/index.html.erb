@@ -1,10 +1,34 @@
 <div class="container">
 	<div class="card">
 		<div class="card-header">
-			<h4>Contatos#index</h4>	
+			<h4>Contatos</h4>	
 		</div>
 
-		<p>Find me in app/views/contatos/index.html.erb</p>	
+
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th>Nome</th>
+		      <th>Telefone</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		    <% @contatos.each do |contato| %>
+		      <tr>
+		        <td><%= contato.nome %></td>
+		        <td><%= contato.telefone %></td>
+		        <td><%= link_to 'Show', contato %></td>
+        		<td><%= link_to 'Edit', edit_contato_path(contato) %></td>
+		       
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+
+		<%= link_to "Novo Contato", new_contato_path, :class => "btn btn-outline-primary" %>
+
 
 
 	</div>	

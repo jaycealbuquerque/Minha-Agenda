@@ -1,0 +1,25 @@
+<div class="container">
+	
+		<h4>Novo Contato</h4>
+
+		<%= form_with model: @contato do |form| %>		
+		  <div class="field">
+		    <%= form.label :nome %><br/>
+		    <%= form.text_field :nome %>
+		  </div>
+
+		  <div class="field">
+		    <%= form.label :telefone %><br/>
+		    <%= form.number_field :telefone %>
+		  </div>
+
+		  <div class="actions">
+		    <%= form.submit %>
+		  </div>	
+		<% end %>
+
+		<%= link_to "Voltar", contatos_path %>
+	
+</div>
+
+
