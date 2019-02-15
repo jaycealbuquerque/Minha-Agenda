@@ -1,7 +1,8 @@
 class ContatosController < ApplicationController
+  before_action :set_contato, only: [:show, :edit, :update, :destroy]
   
   def index
-  	@contatos = Contato.all
+  	@contatos = Contato.where(user_id: current_user.id)
   end
 
   def new
@@ -9,14 +10,22 @@ class ContatosController < ApplicationController
   end
 
   def create
-  	@contato = Contato.create(contato_params)
+  	@contato = Contato.new(contato_params)
+    @contato.user = current_user
 
-  	redirect_to contatos_path
+  	redirect_to @contato
+     if @contato.save
+        redirect_to @contato
+      else
+        render :new 
+        
+      end
 
   end
 
   def show
   	@contato = Contato.find(params[:id])
+    
   end
 
   
@@ -35,6 +44,10 @@ class ContatosController < ApplicationController
 
 
   private
+
+    def set_contato
+      @contato = Contato.find(params[:id])
+    end
 
   	def contato_params
   		params.require(:contato).permit(:nome, :telefone)
