@@ -13,9 +13,9 @@ class ContatosController < ApplicationController
   	@contato = Contato.new(contato_params)
     @contato.user = current_user
 
-  	redirect_to @contato
+  	
      if @contato.save
-        redirect_to @contato
+        redirect_to contatos_path
       else
         render :new 
         
