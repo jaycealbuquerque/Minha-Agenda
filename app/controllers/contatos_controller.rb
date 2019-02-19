@@ -1,4 +1,5 @@
 class ContatosController < ApplicationController
+  
   before_action :set_contato, only: [:show, :edit, :update, :destroy]
   
   def index
