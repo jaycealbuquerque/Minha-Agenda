@@ -1,29 +1,65 @@
-<h2>Sign up</h2>
+<div class="page login-page">
+      <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+          <div class="row">
+            <!-- Logo & Information Panel-->
+            <div class="col-lg-6">
+              <div class="info d-flex align-items-center">
+                <div class="content">
+                  <div class="logo">
+                    <h1>Cadastrar</h1>
+                  </div>
+                  <p>Digite seus dados para se cadastrar.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Form Panel    -->
+            <div class="col-lg-6 bg-white">
+              <div class="form d-flex align-items-center">
+                <div class="content">
+                 
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name,class:"form-validate")) do |f| %>
+                      <%= render "devise/shared/error_messages", resource: resource %>
+                    
+                    <div class="form-group">
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email",id:"register-username",
+                       type:"text", name:"registerUsername", class:"input-material" %>
+                      <label for="register-username" class="label-material">Nome</label>
+                    </div>
+                    
+                       <div class="form-group">
+                      
+                      <%= f.password_field :password, autocomplete: "new-password",id:"register-password", type:"password",   class:"input-material" %>
+                      <label for="register-password" class="label-material">Senha  <% if @minimum_password_length %>
+                      <em>(<%= @minimum_password_length %> characteres no mínimo.)</em>
+                      <% end %><br />     </label>
+                    </div>
+                    
+                    <div class="form-group">
+                     
+                      <%= f.password_field :password_confirmation, autocomplete: "new-password",id:"register-password", type:"password", class:"input-material" %>
+                      <label for="register-password" class="label-material">Confirme sua Senha       </label>
+                    </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+                    <div class="form-group">
+                       <%= f.submit "Cadastrar", class:"btn btn-primary" %>
+                    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+                    
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+                    <% end %>
+                  <small>Já tem uma conta? </small><a href="login.html" ><%= render "devise/shared/links" %></a>
+                
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights text-center">
+        <p>Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a>
+          <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+        </p>
+      </div>
+    </div>
