@@ -1,16 +1,59 @@
-<h2>Forgot your password?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+  
+
+
+
+<div class="page login-page">
+      <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+          <div class="row">
+            <!-- Logo & Information Panel-->
+            <div class="col-lg-6">
+              <div class="info d-flex align-items-center">
+                <div class="content">
+                  <div class="logo">
+                    <h1>Recuperar senha</h1>
+                  </div>
+                  <p>Digite seu email para receber uma nova senha.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Form Panel    -->
+            <div class="col-lg-6 bg-white">
+              <div class="form d-flex align-items-center">
+                <div class="content">
+                                   
+                      <%= form_for(resource, as: resource_name, url: password_path(resource_name,class:"form-validate"), html: { method: :post }) do |f| %>
+  						<%= render "devise/shared/error_messages", resource: resource %>
+                    
+                    <div class="form-group">
+                      
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email",id:"register-username",
+                       type:"text", name:"registerUsername", class:"input-material" %>
+                      <label for="register-username" class="label-material">Informe o email cadastrado.</label>
+                    </div>
+                    
+                    <div class="form-group">
+                       <%= f.submit "Resetar senha", class:"btn btn-primary" %>
+                    </div>
+
+                  
+                    <% end %>
+                  <small>Já tem uma conta? </small><a href="login.html" ><%= render "devise/shared/links" %></a>
+                
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights text-center">
+        <p>Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a>
+          <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+        </p>
+      </div>
+    </div>
