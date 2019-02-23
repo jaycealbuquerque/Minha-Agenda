@@ -13,6 +13,11 @@
 		    <%= form.number_field :telefone %>
 		  </div>
 
+		  <div class="field">
+		  	<%= form.label :tipo_id %><br />
+			<%= form.collection_select :tipo_id, Tipo.order(:nome), :id, :nome, include_blank: true  %>
+		  </div>
+
 		  <div class="actions">
 		    <%= form.submit %>
 		  </div>	

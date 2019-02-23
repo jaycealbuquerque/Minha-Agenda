@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2019_02_22_000516) do
     t.string "nome"
     t.string "telefone"
     t.integer "user_id"
+    t.integer "tipo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["tipo_id"], name: "index_contatos_on_tipo_id"
     t.index ["user_id"], name: "index_contatos_on_user_id"
   end
 
@@ -25,8 +27,10 @@ ActiveRecord::Schema.define(version: 2019_02_22_000516) do
     t.string "nome"
     t.string "descricao"
     t.integer "user_id"
+    t.integer "contatos_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["contatos_id"], name: "index_tipos_on_contatos_id"
     t.index ["user_id"], name: "index_tipos_on_user_id"
   end
 

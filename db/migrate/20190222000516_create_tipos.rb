@@ -4,6 +4,8 @@ class CreateTipos < ActiveRecord::Migration[5.2]
       t.string :nome
       t.string :descricao
       t.references :user, index: true, foreign_key: true
+      t.references :contatos, index: true, foreign_key: true
+
 
       t.timestamps
     end

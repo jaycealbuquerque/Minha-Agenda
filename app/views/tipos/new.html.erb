@@ -1,0 +1,25 @@
+<div class="container">
+	
+		<h4>Novo Tipo</h4>
+
+		<%= form_with model: @tipo do |form| %>		
+		  <div class="field">
+		    <%= form.label :nome %><br/>
+		    <%= form.text_field :nome %>
+		  </div>
+
+		  <div class="field">
+		    <%= form.label :descrição %><br/>
+		    <%= form.text_field :descricao %>
+		  </div>
+
+		  <div class="actions">
+		    <%= form.submit %>
+		  </div>	
+		<% end %>
+
+		<%= link_to "Voltar", tipos_path %>
+	
+</div>
+
+
