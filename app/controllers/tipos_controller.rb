@@ -21,6 +21,22 @@ class TiposController < ApplicationController
 
   	end
 
+  	def destroy
+  		@tipo = Tipo.find(params[:id])
+  		@tipo.destroy
+  		redirect_to tipos_path
+  	end
+
+    def edit
+      @tipo = Tipo.find(params[:id])
+    end
+
+    def update
+      @tipo = Tipo.find(params[:id])
+      @tipo.update(contato_params)
+      redirect_to tipos_path
+    end
+
 
 
 

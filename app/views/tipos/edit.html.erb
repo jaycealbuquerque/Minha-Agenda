@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header"><h4>Editar Contato</h4></div>
+	
+
+	<%= form_with model: @tipo do |form| %>		
+		  <div class="field">
+		    <%= form.label :nome %><br/>
+		    <%= form.text_field :nome %>
+		  </div>
+
+		  <div class="field">
+		    <%= form.label :descricao %><br/>
+		    <%= form.text_field :descricao %>
+		  </div>
+
+		  <div class="actions">
+		    <%= form.submit %>
+		  </div>	
+		<% end %>
+
+	<%= link_to 'Voltar',  tipos_path %>
+
+	</div>
+</div>
+
+
+

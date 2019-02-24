@@ -51,7 +51,7 @@ class ContatosController < ApplicationController
     end
 
   	def contato_params
-  		params.require(:contato).permit(:nome, :telefone)
+  		params.require(:contato).permit(:nome, :telefone, :tipo_id)
   	end
   	
   

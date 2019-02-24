@@ -14,7 +14,7 @@
 		  </div>
 
 		  <div class="field">
-		  	<%= form.label :tipo_id %><br />
+		  	<%= form.label :tipo %><br />
 			<%= form.collection_select :tipo_id, Tipo.order(:nome), :id, :nome, include_blank: true  %>
 		  </div>
 
