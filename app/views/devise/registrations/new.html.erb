@@ -22,9 +22,16 @@
                       <%= render "devise/shared/error_messages", resource: resource %>
                     
                     <div class="form-group">
-                      <%= f.email_field :email, autofocus: true, autocomplete: "email",id:"register-username",
+                      <%= f.email_field :name, autofocus: true, autocomplete: "name",id:"register-name",
                        type:"text", class:"input-material" %>
                       <label for="register-username" class="label-material">Nome</label>
+                    </div>
+
+
+                    <div class="form-group">
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email",id:"register-username",
+                       type:"text", class:"input-material" %>
+                      <label for="register-username" class="label-material">Email</label>
                     </div>
                     
                        <div class="form-group">

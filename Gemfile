@@ -22,6 +22,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 gem 'rails-assets-jquery', source: 'https://rails-assets.org'
 gem 'turbolinks', '~> 5'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
