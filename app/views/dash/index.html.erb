@@ -1,5 +1,7 @@
 <div class="container">
 	<table class="table">
+	  
+
 	  <thead>
 	    <tr>
 	      <th>Nome</th>
@@ -10,7 +12,7 @@
 	  </thead>
 
 	  <tbody>
-	    <% @contatos.each do |contato| %>
+	    <% @dash.each do |contato| %>
 	      <tr>
 	        <td><%= contato.nome %></td>
 	        <td><%= contato.telefone %></td>
@@ -19,9 +21,10 @@
 			<td><%= link_to 'Editar', edit_contato_path(contato) %></td>
 	       
 	      </tr>
-	    <% end %>
+	 	<% end %>
 	  </tbody>
 	</table>
+	<%= paginate @dash %>
 </div>
 
 

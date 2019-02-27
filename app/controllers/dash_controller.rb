@@ -1,7 +1,9 @@
 class DashController < ApplicationController
 
 	def index
-  		@contatos = Contato.where(user_id: current_user.id)
+  		@dash = Contato.order(:nome).page(params[:page])
   	end
+
+
 
 end
