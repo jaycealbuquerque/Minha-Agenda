@@ -44,6 +44,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 
+# Intelligent search made easy with Rails and Elasticsearch 
+gem 'searchkick'
+
 
 
 group :development, :test do
