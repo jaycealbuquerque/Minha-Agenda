@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', 'style'%>
-    <%= javascript_include_tag 'application','front', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -22,20 +22,18 @@
       <header class="header">
         <nav class="navbar">
           <!-- Search Box-->
-          <div class="search-box">
-            <button class="dismiss"><i class="icon-close"></i></button>
-            <form id="searchForm" action="#" role="search">
-              <input type="search" placeholder="Pesquisar..." class="form-control" name="keywords">
-            </form>
+           
+                
           
-          </div>
 
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                  <div class="brand-text d-none d-lg-inline-block"><span>Minha </span><strong>Agenda</strong></div>
+                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block">
+                  <div class="brand-text d-none d-lg-inline-block">
+                    <span>Minha </span><strong>Agenda</strong>
+                  </div>
                 
                
 
@@ -43,11 +41,17 @@
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-                <li class="nav-item d-flex align-items-center"><a id="search" href="#">busca <i class="icon-search"></i></a></li>
-               
-                
-                
-                
+                <li >
+                  <form >
+                    <div class="input-group ">
+                      <div class="input-group-append">
+                        <input type="text" class="form-control" placeholder="Buscar contato" name="keywords" >
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                      </div>
+                    </div>
+                  </form>
+                </li>
+
                 <!-- Logout    -->
                 <li class="nav-item">
                  <span class="d-none d-sm-inline"><%= link_to "Sair", destroy_user_session_path,method: :delete, class:"fa fa-sign-out" %></span></a></li>
@@ -57,6 +61,7 @@
           </div>
         </nav>
       </header>
+
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
         <nav class="side-navbar">
