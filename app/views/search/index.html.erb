@@ -1,14 +1,37 @@
 <h1>Search</h1>
-<section class="busca">
-	<% if @busca.present? %>
-	  <% @busca.each do |serie| %>
-	    <div class="col-md-12">
-	      <h1><%= serie.nome %></h1>
-	    </div>
-	  <% end %>
-	<% end %>
-</selection>
 
 
+<% if @busca.present? %>
+
+<div class="container">
+	<table class="table">
+	  
+
+	  <thead>
+	    <tr>
+	      	<th>Nome</th>
+			<th>Telefome</th>
+			<th>Tipo</th>
+	      
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    
+	  		<% @busca.each do |serie| %>
+		      <tr>
+		        <td><%= serie.nome %></td>
+		      	<td><%= serie.telefone %></td>
+		      	<td><%= serie.tipo.nome %></td>
+		       
+		      </tr>
+	 		<% end %>
+ 			
+	  </tbody>
+	</table>
+	
+<%= paginate @busca %>
+	 <% end %>  
+</div>
 
 
