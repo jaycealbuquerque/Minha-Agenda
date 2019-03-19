@@ -1,7 +1,10 @@
 # Minha Agenda
 
 ![Alt text](login.png?raw=true "Login")
+tela de login
+
 ![Alt text](screen.png?raw=true "Tela")
+tela inicial da agenda
 
 Essa é uma aplicação de agenda que fiz para exercitar o que estou aprendendo sobre rails .
 
