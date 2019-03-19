@@ -1,26 +1,21 @@
-# README
+# Minha Agenda
 
+![Alt text](login.png?raw=true "Login")
 ![Alt text](screen.png?raw=true "Tela")
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Essa é uma aplicação de agenda que fiz para exercitar o que estou aprendendo sobre rails .
 
-Things you may want to cover:
+Coisas que usei nesse app:
 
-* Ruby version
+* Ruby version 2.6.0
 
-* System dependencies
+* Ruby version 5.2.2
 
-* Configuration
+* Gem devise
 
-* Database creation
+* Elasticsearch
 
-* Database initialization
+* Gem faker
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
