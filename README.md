@@ -12,13 +12,17 @@ Coisas que usei nesse app:
 
 * Ruby version 2.6.0
 
-* Ruby version 5.2.2
+* Ruby version 5.2.2 
 
-* Gem devise
+* Gem devise - Autenticação
 
-* Elasticsearch
+* Elasticsearch - Busca
 
-* Gem faker
+* Gem faker - Geração de dados
+
+* Gem kaminari - Paginaçao
+
+* PostgreSQL - Banco de dados
 
 
 
