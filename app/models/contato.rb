@@ -3,7 +3,7 @@ class Contato < ApplicationRecord
 	belongs_to :user
 	belongs_to :tipo
 
-	paginates_per  10
+	paginates_per  7
 
 
 end

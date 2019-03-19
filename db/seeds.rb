@@ -10,8 +10,8 @@ require 'faker'
 puts 'seeds iniciado'
 
 #Tipo.create!(nome: 'novo', descricao: 'novo')
-100.times do
-	Contato.create(nome: Faker::Name.name, telefone: Faker::Number.number(10), user_id: 1, tipo_id: rand(2..4))
+1000.times do
+	Contato.create(nome: Faker::Name.name, telefone: Faker::Number.number(10), user_id: 1, tipo_id: rand(1..3))
 end
 
 

@@ -5,10 +5,7 @@ class ContatosController < ApplicationController
   def index
   	@contatos = Contato.where(user_id: current_user.id)
 
-    if params[:keywords].present?
-          # Diz ao elastickick para pesquisar as keyrwords nos campos name e description
-          @series = Contato.search params[:keywords], fields: [:nome]
-      end
+    
   end
 
   def new
